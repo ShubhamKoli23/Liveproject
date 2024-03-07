@@ -1,0 +1,28 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-ui
+  datasource:
+    #    url: jdbc:postgresql://localhost:5432/testdb
+    #    driverClassName: org.postgresql.Driver
+    #    username: root
+    #    password: pass
+    url: jdbc:h2:file:./testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+# App Properties
+gw:
+  quizapp:
+    jwtSecret: ======================BezKoder=Spring===========================
+    jwtExpirationMs: 86400000
